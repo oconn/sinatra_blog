@@ -7,5 +7,5 @@ require 'faker'
 end
 
 4.times do 
-  Tag.create(name: Faker::Commerce.product_name)  
+  Tag.create(name: Faker::Lorem.word)  
 end
