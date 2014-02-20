@@ -1,11 +1,12 @@
 require 'faker'
 
-10.times do 
-  Post.create(title: Faker::Lorem.sentence,
-  	          body: Faker::Lorem.paragraph
-  	         )
+5.times do 
+  Tag.create(name: Faker::Lorem.word)
 end
 
-4.times do 
-  Tag.create(name: Faker::Lorem.word)  
+10.times do 
+  post = Post.create(title: Faker::Lorem.sentence,
+  	                 body: Faker::Lorem.paragraphs(paragraph_count = 4, supplemental = false).join(" ")
+  	                )
+  post.tags << Tag.find(rand(1..5))
 end

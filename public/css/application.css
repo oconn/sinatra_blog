@@ -1,9 +1,47 @@
 .container {
-  margin: 20px auto;
-  width: 600px;
+  margin: 20px 10%;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
 }
-th {
-  text-align: left;
+
+.home-link {
+	font-size: 2em;
+	color: #333;
+	display: table;
+	padding: 1em;
+	margin: 1em auto;
 }
+
+h2,h3,h4,h5,h6 {
+  margin: 1.4em auto;
+}
+
+#blog-title {
+	color: #222;
+	border-bottom: 2px solid #ccc;
+}
+
+h2.post-title a {
+	color: #222;
+	text-decoration: none;
+}
+
+p.post-date {
+  color: #222;
+}
+
+p.post-body {
+	color: #444;
+	line-height: 1.5;
+}
+
+.tag-header {
+	color: #222;
+}
+
+a {
+	color: blue;
+}
+
+
+
+

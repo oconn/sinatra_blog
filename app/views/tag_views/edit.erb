@@ -1,0 +1,18 @@
+<div class="container">
+	<a class="back-link" href="/">Home</a>
+	<h1>Tags</h1>
+
+	<ul>
+		<% @tags.each do |tag| %>
+		  <li><%= tag.name %> <a href="/tags/delete/<%= tag.id %>">Delete Tag</a></li>
+		<% end %>
+	</ul>
+
+	<form action="/tags/new" method="POST">
+		<h2>New Tag</h2>
+		<p>Tag Name:</p>
+	  <input type="text" name="tag_name">
+	  <br>
+	  <input type="submit" value="Add Tag">
+	</form>
+</div>

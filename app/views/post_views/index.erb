@@ -1,0 +1,17 @@
+<div class="container">	
+	<a class="back-link" href="/">Home</a>
+
+	<h1 id="blog-title">Posts</h1>
+
+	<% @posts.each do |post| %>
+	  <h2 class="post-title"><a href="/posts/<%= post.title %>"><%= post.title %></a></h2>
+	  <p class="post-date"><%= post.created_at.strftime("%d %^b %Y") %></p>
+	  <p class="post-body"><%= post.body %></p>
+	  <h4 class="tag-header">Tags:</h4>
+	  <ul>
+		  <% post.tags.each do |tag| %>
+			  <li><%= tag.name %></li>
+		  <% end %>
+		</ul>
+	<% end %>
+</div>
