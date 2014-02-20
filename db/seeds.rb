@@ -5,3 +5,7 @@ require 'faker'
   	          body: Faker::Lorem.paragraph
   	         )
 end
+
+4.times do 
+  Tag.create(name: Faker::Commerce.product_name)  
+end
