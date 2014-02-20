@@ -1,3 +1,4 @@
-class PostsTag < ActiveRecord::Base
-  # Remember to create a migration!
+class PostTag < ActiveRecord::Base
+  belongs_to :post
+  belongs_to :tag
 end
